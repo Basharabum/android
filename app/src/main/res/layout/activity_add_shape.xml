@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EFEFEF">
+
+        <TextView
+            android:id="@+id/ChooseShapeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/base_margin"
+            android:textSize="@dimen/titles_text_size"
+            android:textColor="@color/primary"
+            android:text="@string/choose_shape"/>
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/shape_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/base_margin"
+            android:layout_marginRight="@dimen/base_margin"
+            android:layout_below="@+id/ChooseShapeTextView"
+            android:textSize="@dimen/medium_text"/>
+
+        <TextView
+            android:id="@+id/ChooseColorTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/base_margin"
+            android:layout_below="@+id/shape_spinner"
+            android:textSize="@dimen/titles_text_size"
+            android:textColor="@color/primary"
+            android:text="@string/choose_color"/>
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/color_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/base_margin"
+            android:layout_marginRight="@dimen/base_margin"
+            android:layout_below="@+id/ChooseColorTextView"
+            android:textSize="@dimen/medium_text"/>
+
+        <TextView
+            android:id="@+id/TitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/base_margin"
+            android:layout_below="@+id/color_spinner"
+            android:textSize="@dimen/titles_text_size"
+            android:textColor="@color/primary"
+            android:text="@string/title"/>
+
+        <EditText
+            android:id="@+id/TitleEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/base_margin"
+            android:layout_marginRight="@dimen/base_margin"
+            android:layout_below="@+id/TitleTextView"
+            android:textSize="@dimen/medium_text"
+            android:textColor="@color/primary"
+            android:padding="@dimen/input_padding"
+            android:hint="@string/hint_title" />
+
+        <TextView
+            android:id="@+id/DescriptionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/base_margin"
+            android:layout_below="@+id/TitleEditText"
+            android:textSize="@dimen/titles_text_size"
+            android:textColor="@color/primary"
+            android:text="@string/description"/>
+
+        <EditText
+            android:id="@+id/DescriptionEditText"
+            android:inputType="textMultiLine"
+            android:lines="3"
+            android:minLines="3"
+            android:maxLines="3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/base_margin"
+            android:layout_marginRight="@dimen/base_margin"
+            android:layout_below="@+id/DescriptionTextView"
+            android:textSize="@dimen/medium_text"
+            android:textColor="@color/primary"
+            android:padding="@dimen/input_padding"
+            android:hint="@string/hint_description" />
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/DescriptionEditText"
+            android:padding="@dimen/base_margin"
+            android:text="@string/add_button_text"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/medium_text" />
+    </RelativeLayout>
+</ScrollView>

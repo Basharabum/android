@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="#EFEFEF">
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/base_margin"
+        android:textSize="@dimen/medium_text"
+        android:textColor="@color/primary"
+        android:padding="@dimen/input_padding"
+        android:hint="@string/hint_username"
+        android:singleLine="true"/>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/base_margin"
+        android:textSize="@dimen/medium_text"
+        android:textColor="@color/primary"
+        android:padding="@dimen/input_padding"
+        android:hint="@string/hint_password"
+        android:inputType="textPassword"
+        android:singleLine="true"/>
+
+    <EditText
+        android:id="@+id/repeat_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/base_margin"
+        android:textSize="@dimen/medium_text"
+        android:textColor="@color/primary"
+        android:padding="@dimen/input_padding"
+        android:hint="@string/hint_repeatpassword"
+        android:inputType="textPassword"
+        android:singleLine="true"/>
+
+    <Button
+        android:id="@+id/signUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/base_margin"
+        android:text="@string/signup_button_text"
+        android:textSize="@dimen/medium_text" />
+
+</LinearLayout>
