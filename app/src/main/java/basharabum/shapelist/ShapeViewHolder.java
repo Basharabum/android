@@ -43,21 +43,21 @@ public class ShapeViewHolder extends RecyclerView.ViewHolder{
         switch (shape.getShapeColor()) {
             case "Red":
                 if (shape.getShapeType().equals("Line")) {
-                    shapeDraw.setStroke(10,Color.RED);
+                    shapeDraw.setStroke(10, Color.RED);
                 } else {
                     shapeDraw.setColor(Color.RED);
                 }
                 break;
             case "Green":
                 if (shape.getShapeType().equals("Line")) {
-                    shapeDraw.setStroke(10,Color.GREEN);
+                    shapeDraw.setStroke(10, Color.GREEN);
                 } else {
                     shapeDraw.setColor(Color.GREEN);
                 }
                 break;
             case "Blue":
                 if (shape.getShapeType().equals("Line")) {
-                    shapeDraw.setStroke(10,Color.BLUE);
+                    shapeDraw.setStroke(10, Color.BLUE);
                 } else {
                     shapeDraw.setColor(Color.BLUE);
                 }

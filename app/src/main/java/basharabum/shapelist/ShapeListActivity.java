@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public class ShapeListActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private RecyclerView profilesList;
+    private RecyclerView shapeList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,12 +25,12 @@ public class ShapeListActivity extends AppCompatActivity implements View.OnClick
 
     private void initViews() {
 
-        profilesList = (RecyclerView) findViewById(R.id.shapes_list);
+        shapeList = (RecyclerView) findViewById(R.id.shapes_list);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this,
                 LinearLayoutManager.VERTICAL, false);
         ShapeListAdapter adapter = new ShapeListAdapter(getShapes());
-        profilesList.setLayoutManager(layoutManager);
-        profilesList.setAdapter(adapter);
+        shapeList.setLayoutManager(layoutManager);
+        shapeList.setAdapter(adapter);
     }
 
     private ArrayList<Shape> getShapes() {
@@ -59,6 +59,12 @@ public class ShapeListActivity extends AppCompatActivity implements View.OnClick
                 Intent intentAddShapeActivity = new Intent(this, AddShapeActivity.class);
                 startActivity(intentAddShapeActivity);
                 break;
+
+            case R.id.exit:
+                Intent intent = new Intent(this, MainActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }
